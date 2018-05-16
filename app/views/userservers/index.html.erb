@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Userservers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Online</th>
+      <th>Owner</th>
+      <th>User</th>
+      <th>Userfile</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @userservers.each do |userserver| %>
+      <tr>
+        <td><%= userserver.online %></td>
+        <td><%= userserver.owner %></td>
+        <td><%= userserver.user.name %></td>
+        <td><%= userserver.userfile.filename %></td>
+        <td><%= link_to 'Show', userserver %></td>
+        <td><%= link_to 'Edit', edit_userserver_path(userserver) %></td>
+        <td><%= link_to 'Destroy', userserver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Userserver', new_userserver_path %>
