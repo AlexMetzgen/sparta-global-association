@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @userfile.filename %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @userfile.date_created %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @userfile.owner %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @userfile.size %>
+</p>
+
+<%= link_to 'Edit', edit_userfile_path(@userfile) %> |
+<%= link_to 'Back', userfiles_path %>

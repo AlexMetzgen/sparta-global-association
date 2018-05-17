@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Online:</strong>
+  <%= @userserver.online %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @userserver.owner %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @userserver.user.name %>
+</p>
+
+<p>
+  <strong>Userfile:</strong>
+  <%= @userserver.userfile.filename %>
+</p>
+
+<%= link_to 'Edit', edit_userserver_path(@userserver) %> |
+<%= link_to 'Back', userservers_path %>

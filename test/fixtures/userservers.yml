@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  online: false
+  owner: MyString
+  user: one
+  userfile: one
+
+two:
+  online: false
+  owner: MyString
+  user: two
+  userfile: two

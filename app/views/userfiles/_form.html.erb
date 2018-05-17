@@ -1,0 +1,37 @@
+<%= form_with(model: userfile, local: true) do |form| %>
+  <% if userfile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(userfile.errors.count, "error") %> prohibited this userfile from being saved:</h2>
+
+      <ul>
+      <% userfile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :filename %>
+    <%= form.text_field :filename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_created %>
+    <%= form.text_field :date_created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.number_field :size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
